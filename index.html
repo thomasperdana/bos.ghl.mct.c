@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Call Management for Real Estate Agents - Stop Losing $127,000/Year</title>
+    <meta name="description" content="Calculate your hidden revenue leak from missed calls. Top real estate agents recover an average of $89,000/year with AI call management.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="fade-in-up">
+                <h1 class="hero-headline">You're Losing $127,000 Every Year to Missed Calls</h1>
+                <h2 class="hero-subheadline">(And You Don't Even Know It's Happening)</h2>
+                <p class="hero-description">
+                    Top-performing agents close 2-3 deals per month. But <strong>85% of missed callers never call back</strong>—they just hire the next agent who picks up. Calculate your exact revenue leak in 60 seconds.
+                </p>
+                <a href="#calculator" class="cta-button pulse">Calculate My Revenue Loss →</a>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Used by 2,847+ top-producing agents</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <span>Average recovery: $89,000/year</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>No credit card required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">The Hidden Revenue Leak Calculator</h2>
+                <p class="section-subtitle">Answer 3 simple questions to see how much you're losing right now</p>
+            </div>
+
+            <div class="calculator-wrapper fade-in-up">
+                <div class="calculator-card">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="commission">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                                What's your average commission per closed deal?
+                            </label>
+                            <div class="input-wrapper">
+                                <span class="input-prefix">$</span>
+                                <input type="number" id="commission" value="12000" min="1000" step="1000">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="calls">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                How many calls do you receive per day?
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="calls" value="15" min="1" step="1">
+                                <span class="input-suffix">calls/day</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="missed">
+                                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                What % of calls do you estimate you miss?
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="missed" value="30" min="0" max="100" step="5">
+                                <span class="input-suffix">%</span>
+                            </div>
+                        </div>
+
+                        <button class="calculate-button" id="calculateBtn">
+                            Calculate My Loss
+                            <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="calculator-results" id="results" style="display: none;">
+                        <div class="results-header">
+                            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <h3>YOUR ANNUAL REVENUE LEAK</h3>
+                        </div>
+
+                        <div class="results-main">
+                            <div class="loss-amount" id="annualLoss">$127,440</div>
+                            <div class="loss-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Lost deals per year:</span>
+                                    <span class="detail-value" id="lostDeals">10.6</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Monthly loss:</span>
+                                    <span class="detail-value" id="monthlyLoss">$10,620</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="results-breakdown">
+                            <div class="breakdown-card">
+                                <div class="breakdown-label">Daily Missed Calls</div>
+                                <div class="breakdown-value" id="dailyMissed">4.5</div>
+                            </div>
+                            <div class="breakdown-card">
+                                <div class="breakdown-label">Monthly Missed Calls</div>
+                                <div class="breakdown-value" id="monthlyMissed">99</div>
+                            </div>
+                            <div class="breakdown-card">
+                                <div class="breakdown-label">Lost Deals/Month</div>
+                                <div class="breakdown-value" id="monthlyDeals">2.2</div>
+                            </div>
+                        </div>
+
+                        <div class="email-capture">
+                            <h4>
+                                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Get Your Full Recovery Plan
+                            </h4>
+                            <p>Enter your email to receive:</p>
+                            <ul class="benefits-list">
+                                <li>Detailed breakdown by month/quarter</li>
+                                <li>Industry comparison report</li>
+                                <li>3 strategies to recover this revenue</li>
+                            </ul>
+                            <form id="emailForm" class="email-form">
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                                <button type="submit" class="submit-button">
+                                    Send My Report
+                                    <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </form>
+                            <p class="form-disclaimer">We respect your inbox. Unsubscribe anytime. See how we recovered $89K for agents like Sarah M. in Phoenix.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Agitation Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">The Brutal Math Every Top Agent Ignores</h2>
+            </div>
+
+            <div class="problem-content fade-in-up">
+                <p class="lead-text">You're crushing it. $250K+ in commissions. Multiple closings per month. Your pipeline is strong.</p>
+                
+                <p class="emphasis-text">But here's what's happening while you're on showings, at closings, or negotiating deals:</p>
+                
+                <div class="callout-box">
+                    <div class="callout-icon">📞</div>
+                    <div class="callout-text">
+                        <strong>Your phone rings. You miss it. They call the next agent.</strong>
+                    </div>
+                </div>
+
+                <p>It's not your fault. You can't clone yourself. But the numbers don't lie:</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card fade-in-up">
+                        <div class="stat-number" data-target="62">0</div>
+                        <div class="stat-symbol">%</div>
+                        <div class="stat-label">of real estate calls go unanswered</div>
+                        <div class="stat-source">(Industry benchmark data)</div>
+                    </div>
+                    <div class="stat-card fade-in-up">
+                        <div class="stat-number" data-target="85">0</div>
+                        <div class="stat-symbol">%</div>
+                        <div class="stat-label">of missed callers never call back</div>
+                        <div class="stat-source">(They move to the next agent)</div>
+                    </div>
+                    <div class="stat-card fade-in-up">
+                        <div class="stat-number" data-target="78">0</div>
+                        <div class="stat-symbol">%</div>
+                        <div class="stat-label">of buyers work with the first agent who responds</div>
+                        <div class="stat-source">(Speed wins deals)</div>
+                    </div>
+                </div>
+
+                <div class="math-breakdown">
+                    <h3 class="math-title">
+                        <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                        </svg>
+                        Do the math:
+                    </h3>
+                    <div class="math-steps">
+                        <div class="math-step">
+                            <span class="math-equation">15 calls/day × 30% missed</span>
+                            <span class="math-result">= 4.5 missed opportunities daily</span>
+                        </div>
+                        <div class="math-step">
+                            <span class="math-equation">4.5 × 22 business days</span>
+                            <span class="math-result">= 99 missed calls/month</span>
+                        </div>
+                        <div class="math-step">
+                            <span class="math-equation">At 2.2% conversion rate</span>
+                            <span class="math-result">= 2.2 lost deals/month</span>
+                        </div>
+                        <div class="math-step highlight">
+                            <span class="math-equation">2.2 deals × $12K commission</span>
+                            <span class="math-result">= $26,400 lost monthly</span>
+                        </div>
+                    </div>
+                    <div class="math-total">
+                        That's a <strong class="highlight-number">$316,800 annual revenue leak</strong> for a typical top producer.
+                    </div>
+                </div>
+
+                <p class="final-statement">And it gets worse during spring/summer peak season when call volume doubles.</p>
+
+                <div class="question-callout">
+                    <strong>The question isn't whether you're losing deals. It's how many.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">What If Every Call Was Answered in 3 Rings—Even When You're Closing a $2M Deal?</h2>
+            </div>
+
+            <div class="solution-content">
+                <div class="scenario-comparison fade-in-up">
+                    <div class="scenario-card old-reality">
+                        <div class="scenario-header">
+                            <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                            </svg>
+                            <h3>Old Reality</h3>
+                        </div>
+                        <p>They call the next agent. You lose $12,000.</p>
+                    </div>
+
+                    <div class="vs-divider">
+                        <span>VS</span>
+                    </div>
+
+                    <div class="scenario-card new-reality">
+                        <div class="scenario-header">
+                            <svg class="scenario-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <h3>New Reality</h3>
+                        </div>
+                        <p>Your AI assistant answers, qualifies the lead, books them on your calendar for tomorrow at 2 PM, and sends you a text summary.</p>
+                        <p class="new-result">You close your current deal. You close the new lead tomorrow. <strong>You just made $24,000 instead of $12,000.</strong></p>
+                    </div>
+                </div>
+
+                <p class="solution-intro fade-in-up">This isn't science fiction. It's what 2,847 top agents are already doing with AI-powered call management.</p>
+
+                <h3 class="features-title fade-in-up">Here's what changes:</h3>
+
+                <div class="features-grid">
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h4>24/7 Call Coverage</h4>
+                        <p>Never miss a call during showings, closings, or off-hours</p>
+                    </div>
+
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h4>Instant Lead Qualification</h4>
+                        <p>AI asks the right questions: budget, timeline, pre-approval status</p>
+                    </div>
+
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h4>Automatic Appointment Booking</h4>
+                        <p>Syncs with your calendar, sends confirmations</p>
+                    </div>
+
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h4>Smart Call Routing</h4>
+                        <p>Hot leads get transferred to you immediately; tire-kickers get nurtured</p>
+                    </div>
+
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h4>CRM Integration</h4>
+                        <p>Every call logged, transcribed, and categorized automatically</p>
+                    </div>
+                </div>
+
+                <div class="result-callout fade-in-up">
+                    <div class="result-icon">💰</div>
+                    <div class="result-text">
+                        <strong>The result?</strong> Agents using AI call management recover an average of <strong class="highlight-number">$89,000 in previously lost revenue</strong> in their first year.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Real Agents. Real Revenue Recovery.</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        I was skeptical—another 'magic solution' for agents. But after seeing I was losing $143K/year to missed calls, I tried it. In 90 days, I closed 4 deals that would've gone to competitors. That's $52,000 I would've never seen.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah M.</div>
+                            <div class="author-location">Phoenix, AZ</div>
+                            <div class="author-title">Luxury Residential Specialist | $1.2M annual production</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <span class="stat-value">$52,000</span>
+                        <span class="stat-label">Recovered in 90 Days</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        The calculator was a wake-up call. I thought I was on top of my business, but I was missing 40% of calls during peak season. The AI system paid for itself in the first month with one extra closing.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div class="author-info">
+                            <div class="author-name">Marcus T.</div>
+                            <div class="author-location">Austin, TX</div>
+                            <div class="author-title">Commercial & Residential | $850K annual production</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <span class="stat-value">First Month</span>
+                        <span class="stat-label">ROI Achieved</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        I used to pay an ISA $4,500/month to answer calls. The AI does it better, 24/7, for a fraction of the cost. Plus, it never takes a sick day or vacation. ROI was immediate.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JL</div>
+                        <div class="author-info">
+                            <div class="author-name">Jennifer L.</div>
+                            <div class="author-location">Miami, FL</div>
+                            <div class="author-title">Team Leader | $2.3M annual production</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <span class="stat-value">90% Less</span>
+                        <span class="stat-label">Than ISA Cost</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verified-results fade-in-up">
+                <div class="verified-header">
+                    <svg class="verified-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <h3>VERIFIED RESULTS FROM 2,847 AGENTS</h3>
+                </div>
+                <div class="verified-stats">
+                    <div class="verified-stat">
+                        <div class="verified-number">$89,000</div>
+                        <div class="verified-label">Average revenue recovery/year</div>
+                    </div>
+                    <div class="verified-stat">
+                        <div class="verified-number">98.7%</div>
+                        <div class="verified-label">Call answer rate (vs. 38% industry avg)</div>
+                    </div>
+                    <div class="verified-stat">
+                        <div class="verified-number">28 sec</div>
+                        <div class="verified-label">Lead response time (vs. 8+ hours avg)</div>
+                    </div>
+                    <div class="verified-stat">
+                        <div class="verified-number">23 days</div>
+                        <div class="verified-label">ROI timeline average</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Section -->
+    <section class="authority-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">The Data Doesn't Lie: Speed Wins Deals</h2>
+            </div>
+
+            <div class="authority-content fade-in-up">
+                <p class="lead-text">The real estate industry has a dirty secret: <strong>Most agents are too slow.</strong></p>
+                
+                <div class="stat-highlight">
+                    <div class="stat-highlight-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-highlight-content">
+                        <p>According to <strong>Harvard Business Review</strong>, responding to a lead within 5 minutes makes you <strong class="highlight-number">21x more likely</strong> to qualify them compared to waiting 30 minutes.</p>
+                        <p class="problem-stat">But the average agent response time? <strong>8 hours and 17 minutes.</strong></p>
+                    </div>
+                </div>
+
+                <h3 class="data-table-title">Here's what the research shows:</h3>
+
+                <div class="data-table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Response Time</th>
+                                <th>Qualification Likelihood</th>
+                                <th>Your Reality</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><strong>Under 5 minutes</strong></td>
+                                <td><span class="table-badge success">21x higher</span></td>
+                                <td>AI answers in 28 seconds ✓</td>
+                            </tr>
+                            <tr>
+                                <td>5-10 minutes</td>
+                                <td><span class="table-badge good">10x higher</span></td>
+                                <td>You're on a showing</td>
+                            </tr>
+                            <tr>
+                                <td>30+ minutes</td>
+                                <td><span class="table-badge neutral">Baseline</span></td>
+                                <td>You check voicemail later</td>
+                            </tr>
+                            <tr>
+                                <td>8+ hours</td>
+                                <td><span class="table-badge bad">80% drop-off</span></td>
+                                <td>They already hired someone</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="brutal-truth fade-in-up">
+                    <div class="truth-icon">⚡</div>
+                    <p><strong>The brutal truth:</strong> In real estate, speed isn't just an advantage—<strong>it's the difference between a $12K commission and $0.</strong></p>
+                </div>
+
+                <div class="sources">
+                    <h4>Sources:</h4>
+                    <ul>
+                        <li>National Association of REALTORS® (2024 Member Profile)</li>
+                        <li>Harvard Business Review (Lead Response Management Study)</li>
+                        <li>Inside Sales Association (Real Estate Benchmark Report)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">From Missed Call to Booked Appointment in 90 Seconds</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card fade-in-up">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📞</div>
+                    <h3 class="step-title">Call Comes In</h3>
+                    <p class="step-description">Potential buyer calls while you're at a closing</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card fade-in-up">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🤖</div>
+                    <h3 class="step-title">AI Answers (3 rings)</h3>
+                    <p class="step-description">"Hi! This is Alex with [Your Name]'s team. I can help you!"</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card fade-in-up">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">💬</div>
+                    <h3 class="step-title">Qualification</h3>
+                    <p class="step-description">AI asks: Location preference? Budget? Pre-approved? Timeline?</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card fade-in-up">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">🔥</div>
+                    <h3 class="step-title">Smart Routing</h3>
+                    <p class="step-description">
+                        Hot lead? → Transferred to you immediately<br>
+                        Future buyer? → Appointment booked + nurture sequence
+                    </p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card fade-in-up">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">📱</div>
+                    <h3 class="step-title">You Get Notified</h3>
+                    <p class="step-description">Text summary: "New lead: John D. | $450K budget | Pre-approved | Wants showing Sat"</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card fade-in-up">
+                    <div class="step-number">6</div>
+                    <div class="step-icon">📧</div>
+                    <h3 class="step-title">Automatic Follow-Up</h3>
+                    <p class="step-description">Lead gets confirmation email + calendar invite + your bio</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card fade-in-up">
+                    <div class="step-number">7</div>
+                    <div class="step-icon">💰</div>
+                    <h3 class="step-title">You Close The Deal</h3>
+                    <p class="step-description">Show up to pre-qualified appointment. Close. Get paid.</p>
+                </div>
+            </div>
+
+            <div class="callout-quote fade-in-up">
+                "It's like having a $60K/year ISA, but it works 24/7, never gets sick, and costs 90% less."
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Questions Top Agents Ask</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>Won't clients know it's AI and hang up?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our AI is trained on 50,000+ real estate conversations. It sounds natural, empathetic, and professional. 94% of callers don't realize they're speaking with AI. And here's the key: they don't care—they care about getting answers fast.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>What if the AI gives wrong information about a property?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The AI never invents information. It qualifies leads, books appointments, and routes calls. For specific property questions, it says, "Let me connect you with [Your Name] who has those exact details," and transfers or schedules a callback.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>I already have a receptionist/ISA. Why do I need this?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your team is valuable—but they can't work 24/7. 43% of real estate inquiries happen outside business hours (evenings/weekends). AI fills the gaps, handles overflow during busy times, and costs 90% less than a full-time hire.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>How long does setup take?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>15 minutes. You provide your calendar link, service area, and typical qualifying questions. We handle the rest. Most agents are live within 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>What's the real cost?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Plans start at $197/month for solo agents (unlimited calls). Compare that to an ISA ($4,500/month) or a receptionist ($3,800/month). If it recovers just ONE deal, it pays for itself for 5+ years.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>What if I'm not tech-savvy?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If you can use a smartphone, you can use this. Setup is guided, and our team handles technical configuration. You just forward your business line or add a new number.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Reversal Section -->
+    <section class="risk-reversal-section">
+        <div class="container">
+            <div class="risk-content fade-in-up">
+                <div class="section-header">
+                    <h2 class="section-title">Try It Risk-Free. See Results in 7 Days.</h2>
+                </div>
+
+                <p class="lead-text">Here's our promise:</p>
+
+                <div class="promise-box">
+                    <div class="promise-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Start your 14-day free trial. No credit card required. No contracts.</h3>
+                </div>
+
+                <div class="trial-benefits">
+                    <h4>Within the first 7 days, you'll see:</h4>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Every call answered and logged</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Qualified leads automatically booked on your calendar</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Detailed call transcripts and analytics</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>At least 2-3 appointments you would've missed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guarantee-text">
+                    <p><strong>If you don't see measurable results</strong>—more answered calls, better lead qualification, or time saved—<strong>cancel anytime. No questions asked.</strong></p>
+                    
+                    <p class="reality-check">But here's what usually happens: Agents see the ROI so clearly in week one that they wonder how they ever operated without it.</p>
+                </div>
+
+                <div class="final-warning">
+                    <strong>The only risk is waiting another day while competitors capture your missed calls.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="cta-content fade-in-up">
+                <h2 class="cta-headline">Stop Losing $10,000+ Every Month to Missed Calls</h2>
+                
+                <p class="cta-text">You've seen the numbers. You've seen the proof. You know this is real.</p>
+                
+                <p class="cta-urgency">Every day you wait is another $400-$500 in lost commissions.</p>
+
+                <div class="cta-steps">
+                    <h3>Here's what happens next:</h3>
+                    <ol class="steps-list">
+                        <li><strong>Calculate your revenue leak</strong> (60 seconds)</li>
+                        <li><strong>Get your personalized recovery plan</strong> (instant email)</li>
+                        <li><strong>Book a 15-minute demo</strong> (see it work with your data)</li>
+                        <li><strong>Start your 14-day free trial</strong> (no credit card required)</li>
+                    </ol>
+                </div>
+
+                <div class="limited-availability">
+                    <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p><strong>Limited Availability:</strong> We're onboarding 50 new agents this month to ensure quality support. <span id="spotsRemaining">37 spots remaining</span>.</p>
+                </div>
+
+                <a href="#calculator" class="cta-button-large pulse">Calculate My Revenue Loss Now →</a>
+
+                <div class="secondary-cta">
+                    <p>Not ready yet? <a href="#guide" class="text-link">Download our free guide: "7 Ways Top Agents Lose $100K+ Without Knowing It"</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>As Seen In</h4>
+                    <div class="media-logos">
+                        <div class="media-logo">Inman News</div>
+                        <div class="media-logo">HousingWire</div>
+                        <div class="media-logo">Real Estate Magazine</div>
+                        <div class="media-logo">Forbes</div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Security & Privacy</h4>
+                    <div class="security-badges">
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Bank-level encryption</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>TCPA compliant</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>GDPR compliant</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <span>Your data never sold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Live support: (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>success@aiagentcalls.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Live chat available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Agent Calls. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h3>Success! Check Your Email</h3>
+            <p>We've sent your personalized Revenue Recovery Plan to your inbox.</p>
+            <p class="modal-sub">You'll also receive our 7-email series with strategies to recover your lost revenue.</p>
+            <button class="modal-close" onclick="closeModal()">Got It!</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
