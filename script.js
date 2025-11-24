@@ -43,15 +43,20 @@ function calculateROI() {
 
     leftOnTableDisplay.textContent = formatCurrency(leftOnTable);
     roiDisplay.textContent = formatPercentage(roi);
+
+    // Trigger pulse animation
+    roiDisplay.classList.remove('pulse');
+    void roiDisplay.offsetWidth; // Trigger reflow
+    roiDisplay.classList.add('pulse');
 }
 
 calculateBtn.addEventListener('click', calculateROI);
 
 // Initial calculation on load
-calculateROI();
+// calculateROI(); // Disabled to keep blank until click
 
 // Optional: Calculate on input change for real-time feedback
-[clientValueInput, missedCallsInput, closeRateInput, weChargeInput].forEach(input => {
-    input.addEventListener('input', calculateROI);
-});
+// [clientValueInput, missedCallsInput, closeRateInput, weChargeInput].forEach(input => {
+//     input.addEventListener('input', calculateROI);
+// });
 

@@ -13,40 +13,52 @@
 
 <body>
     <div class="calculator-container">
-        <div class="calculator-card">
-            <h1>The Missed Call Textback ROI Calculator</h1>
+        <div class="main-wrapper">
+            <div class="calculator-card">
+                <h1>The Missed Call Textback ROI Calculator</h1>
 
-            <div class="input-group">
-                <label for="client-value">Average Client Value ($)</label>
-                <input type="number" id="client-value" placeholder="10000" value="10000">
-            </div>
-
-            <div class="input-group">
-                <label for="missed-calls">Missed Calls per Week</label>
-                <input type="number" id="missed-calls" placeholder="20" value="20">
-            </div>
-
-            <div class="input-group">
-                <label for="close-rate">Average Close Rate (%)</label>
-                <input type="number" id="close-rate" placeholder="20" value="20">
-            </div>
-
-            <div class="input-group">
-                <label for="we-charge">We Charge (per month) ($)</label>
-                <input type="number" id="we-charge" placeholder="497" value="497">
-            </div>
-
-            <button id="calculate-btn">Calculate ROI</button>
-
-            <div class="results-section">
-                <div class="result-item">
-                    <span class="label">Monthly $$$ Left on Table</span>
-                    <span class="value" id="left-on-table">$0.00</span>
+                <div class="input-group">
+                    <label for="client-value">Average Client Value ($)</label>
+                    <input type="number" id="client-value" placeholder="10000" value="10000">
                 </div>
-                <div class="result-item highlight">
-                    <span class="label">ROI</span>
-                    <span class="value" id="roi-value">0%</span>
+
+                <div class="input-group">
+                    <label for="missed-calls">Missed Calls per Week</label>
+                    <input type="number" id="missed-calls" placeholder="20" value="20">
                 </div>
+
+                <div class="input-group">
+                    <label for="close-rate">Average Close Rate (%)</label>
+                    <input type="number" id="close-rate" placeholder="20" value="20">
+                </div>
+
+                <div class="input-group">
+                    <label for="we-charge">We Charge (per month) ($)</label>
+                    <input type="number" id="we-charge" placeholder="497" value="497">
+                </div>
+
+                <button id="calculate-btn">Calculate ROI</button>
+
+                <div class="results-section">
+                    <div class="result-item">
+                        <span class="label">Monthly $$$ Left on Table</span>
+                        <span class="value" id="left-on-table"></span>
+                    </div>
+                    <div class="result-item highlight">
+                        <span class="label">ROI</span>
+                        <span class="value" id="roi-value"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <h2>Much Your Missed Calls Are Costing You</h2>
+                <ul>
+                    <li>Enter the average lifetime value of a customer</li>
+                    <li>Enter an estimate of how many calls you miss per month</li>
+                    <li>Enter the rate at which you close new sales</li>
+                </ul>
+                <p class="cta-text">Hit Calculate and we'll show you how much money we can make you!</p>
             </div>
         </div>
         <p class="description-text">themissedcalltextback is a service that automatically texts back missed calls from
