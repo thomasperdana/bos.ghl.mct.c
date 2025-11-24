@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROI Calculator</title>
+    <title>The Missed Call Textback ROI Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,11 @@
 <body>
     <div class="calculator-container">
         <div class="calculator-card">
-            <h1>ROI Calculator</h1>
+            <h1>The Missed Call Textback ROI Calculator</h1>
 
             <div class="input-group">
                 <label for="client-value">Average Client Value ($)</label>
-                <input type="number" id="client-value" placeholder="5000" value="5000">
+                <input type="number" id="client-value" placeholder="10000" value="10000">
             </div>
 
             <div class="input-group">
@@ -31,6 +31,11 @@
                 <input type="number" id="close-rate" placeholder="20" value="20">
             </div>
 
+            <div class="input-group">
+                <label for="we-charge">We Charge (per month) ($)</label>
+                <input type="number" id="we-charge" placeholder="497" value="497">
+            </div>
+
             <button id="calculate-btn">Calculate ROI</button>
 
             <div class="results-section">
@@ -38,16 +43,14 @@
                     <span class="label">Monthly $$$ Left on Table</span>
                     <span class="value" id="left-on-table">$0.00</span>
                 </div>
-                <div class="result-item">
-                    <span class="label">We Charge (per month)</span>
-                    <span class="value" id="we-charge">$297.00</span>
-                </div>
                 <div class="result-item highlight">
                     <span class="label">ROI</span>
                     <span class="value" id="roi-value">0%</span>
                 </div>
             </div>
         </div>
+        <p class="description-text">themissedcalltextback is a service that automatically texts back missed calls from
+            your business</p>
     </div>
     <script src="script.js"></script>
 </body>
