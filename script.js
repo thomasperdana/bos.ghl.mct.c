@@ -1,171 +1,56 @@
-class Calculator {
-    constructor(previousOperandTextElement, currentOperandTextElement) {
-        this.previousOperandTextElement = previousOperandTextElement;
-        this.currentOperandTextElement = currentOperandTextElement;
-        this.clear();
-    }
+const clientValueInput = document.getElementById('client-value');
+const missedCallsInput = document.getElementById('missed-calls');
+const closeRateInput = document.getElementById('close-rate');
+const calculateBtn = document.getElementById('calculate-btn');
 
-    clear() {
-        this.currentOperand = '0';
-        this.previousOperand = '';
-        this.operation = undefined;
-    }
+const leftOnTableDisplay = document.getElementById('left-on-table');
+const weChargeDisplay = document.getElementById('we-charge');
+const roiDisplay = document.getElementById('roi-value');
 
-    delete() {
-        if (this.currentOperand === '0') return;
-        this.currentOperand = this.currentOperand.toString().slice(0, -1);
-        if (this.currentOperand === '') this.currentOperand = '0';
-    }
+const WE_CHARGE = 297;
 
-    appendNumber(number) {
-        if (number === '.' && this.currentOperand.includes('.')) return;
-        if (this.currentOperand === '0' && number !== '.') {
-            this.currentOperand = number.toString();
-        } else {
-            this.currentOperand = this.currentOperand.toString() + number.toString();
-        }
-    }
-
-    chooseOperation(operation) {
-        if (this.currentOperand === '') return;
-        if (this.previousOperand !== '') {
-            this.compute();
-        }
-        this.operation = operation;
-        this.previousOperand = this.currentOperand;
-        this.currentOperand = '0';
-    }
-
-    compute() {
-        let computation;
-        const prev = parseFloat(this.previousOperand);
-        const current = parseFloat(this.currentOperand);
-        if (isNaN(prev) || isNaN(current)) return;
-        switch (this.operation) {
-            case '+':
-                computation = prev + current;
-                break;
-            case '-':
-                computation = prev - current;
-                break;
-            case '×':
-                computation = prev * current;
-                break;
-            case '÷':
-                computation = prev / current;
-                break;
-            default:
-                return;
-        }
-        this.currentOperand = computation;
-        this.operation = undefined;
-        this.previousOperand = '';
-    }
-
-    getDisplayNumber(number) {
-        const stringNumber = number.toString();
-        const integerDigits = parseFloat(stringNumber.split('.')[0]);
-        const decimalDigits = stringNumber.split('.')[1];
-        let integerDisplay;
-        if (isNaN(integerDigits)) {
-            integerDisplay = '';
-        } else {
-            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
-        }
-        if (decimalDigits != null) {
-            return `${integerDisplay}.${decimalDigits}`;
-        } else {
-            return integerDisplay;
-        }
-    }
-
-    updateDisplay() {
-        this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand);
-        if (this.operation != null) {
-            this.previousOperandTextElement.innerText = 
-                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
-        } else {
-            this.previousOperandTextElement.innerText = '';
-        }
-    }
+function formatCurrency(value) {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(value);
 }
 
-const previousOperandTextElement = document.getElementById('previous-operand');
-const currentOperandTextElement = document.getElementById('current-operand');
+function formatPercentage(value) {
+    return new Intl.NumberFormat('en-US', {
+        style: 'percent',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(value / 100);
+}
 
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
+function calculateROI() {
+    const clientValue = parseFloat(clientValueInput.value) || 0;
+    const missedCalls = parseFloat(missedCallsInput.value) || 0;
+    const closeRate = parseFloat(closeRateInput.value) || 0;
 
-const numberButtons = document.querySelectorAll('[data-number]');
-const operationButtons = document.querySelectorAll('[data-action="add"], [data-action="subtract"], [data-action="multiply"], [data-action="divide"]');
-const equalsButton = document.querySelector('[data-action="calculate"]');
-const deleteButton = document.querySelector('[data-action="delete"]');
-const allClearButton = document.querySelector('[data-action="clear"]');
-const percentButton = document.querySelector('[data-action="percent"]');
+    // Formula from Google Sheet:
+    // Monthly $$$ Left on Table = (Missed Calls * Close Rate * Client Value) - We Charge
+    // Note: Missed Calls is treated as a base unit multiplier directly in this specific sheet logic.
+    // revenue = 20 * 0.20 * 5000 = 20,000
 
-numberButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.appendNumber(button.getAttribute('data-number'));
-        calculator.updateDisplay();
-    });
-});
+    const revenue = missedCalls * (closeRate / 100) * clientValue;
+    const leftOnTable = revenue - WE_CHARGE;
 
-operationButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.chooseOperation(button.innerText);
-        calculator.updateDisplay();
-    });
-});
+    const roi = (leftOnTable / WE_CHARGE) * 100;
 
-equalsButton.addEventListener('click', button => {
-    calculator.compute();
-    calculator.updateDisplay();
-});
+    leftOnTableDisplay.textContent = formatCurrency(leftOnTable);
+    roiDisplay.textContent = formatPercentage(roi);
+}
 
-allClearButton.addEventListener('click', button => {
-    calculator.clear();
-    calculator.updateDisplay();
-});
+calculateBtn.addEventListener('click', calculateROI);
 
-deleteButton.addEventListener('click', button => {
-    calculator.delete();
-    calculator.updateDisplay();
-});
+// Initial calculation on load
+calculateROI();
 
-percentButton.addEventListener('click', () => {
-    if (calculator.currentOperand === '') return;
-    calculator.currentOperand = parseFloat(calculator.currentOperand) / 100;
-    calculator.updateDisplay();
-});
-
-// Keyboard support
-document.addEventListener('keydown', e => {
-    if ((e.key >= 0 && e.key <= 9) || e.key === '.') {
-        calculator.appendNumber(e.key);
-        calculator.updateDisplay();
-    }
-    if (e.key === '+' || e.key === '-') {
-        calculator.chooseOperation(e.key);
-        calculator.updateDisplay();
-    }
-    if (e.key === '*') {
-        calculator.chooseOperation('×');
-        calculator.updateDisplay();
-    }
-    if (e.key === '/') {
-        calculator.chooseOperation('÷');
-        calculator.updateDisplay();
-    }
-    if (e.key === 'Enter' || e.key === '=') {
-        e.preventDefault();
-        calculator.compute();
-        calculator.updateDisplay();
-    }
-    if (e.key === 'Backspace') {
-        calculator.delete();
-        calculator.updateDisplay();
-    }
-    if (e.key === 'Escape') {
-        calculator.clear();
-        calculator.updateDisplay();
-    }
+// Optional: Calculate on input change for real-time feedback
+[clientValueInput, missedCallsInput, closeRateInput].forEach(input => {
+    input.addEventListener('input', calculateROI);
 });

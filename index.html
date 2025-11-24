@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>ROI Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="calculator-container">
-        <div class="calculator">
-            <div class="display">
-                <div class="previous-operand" id="previous-operand"></div>
-                <div class="current-operand" id="current-operand">0</div>
+        <div class="calculator-card">
+            <h1>ROI Calculator</h1>
+
+            <div class="input-group">
+                <label for="client-value">Average Client Value ($)</label>
+                <input type="number" id="client-value" placeholder="5000" value="5000">
             </div>
-            <div class="buttons">
-                <button class="btn function" data-action="clear">AC</button>
-                <button class="btn function" data-action="delete">DEL</button>
-                <button class="btn function" data-action="percent">%</button>
-                <button class="btn operator" data-action="divide">÷</button>
-                
-                <button class="btn number" data-number="7">7</button>
-                <button class="btn number" data-number="8">8</button>
-                <button class="btn number" data-number="9">9</button>
-                <button class="btn operator" data-action="multiply">×</button>
-                
-                <button class="btn number" data-number="4">4</button>
-                <button class="btn number" data-number="5">5</button>
-                <button class="btn number" data-number="6">6</button>
-                <button class="btn operator" data-action="subtract">−</button>
-                
-                <button class="btn number" data-number="1">1</button>
-                <button class="btn number" data-number="2">2</button>
-                <button class="btn number" data-number="3">3</button>
-                <button class="btn operator" data-action="add">+</button>
-                
-                <button class="btn number zero" data-number="0">0</button>
-                <button class="btn number" data-number=".">.</button>
-                <button class="btn equals" data-action="calculate">=</button>
+
+            <div class="input-group">
+                <label for="missed-calls">Missed Calls per Week</label>
+                <input type="number" id="missed-calls" placeholder="20" value="20">
+            </div>
+
+            <div class="input-group">
+                <label for="close-rate">Average Close Rate (%)</label>
+                <input type="number" id="close-rate" placeholder="20" value="20">
+            </div>
+
+            <button id="calculate-btn">Calculate ROI</button>
+
+            <div class="results-section">
+                <div class="result-item">
+                    <span class="label">Monthly $$$ Left on Table</span>
+                    <span class="value" id="left-on-table">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">We Charge (per month)</span>
+                    <span class="value" id="we-charge">$297.00</span>
+                </div>
+                <div class="result-item highlight">
+                    <span class="label">ROI</span>
+                    <span class="value" id="roi-value">0%</span>
+                </div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
