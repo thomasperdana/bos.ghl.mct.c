@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Missed Call Text Back Solution</title>
+    <meta name="description" content="Get started with our AI-powered Missed Call Text Back Solution. 30-day trial available.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Order Header Section -->
+    <section class="order-hero-section">
+        <div class="container">
+            <div class="order-header fade-in-up">
+                <a href="index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Calculator
+                </a>
+                <h1 class="order-headline">Missed Call Text Back Solution</h1>
+                <p class="order-subheadline">Never Lose Another Deal to a Missed Call</p>
+                <p class="order-description">
+                    Your AI-powered call assistant that answers every call in 3 rings, qualifies leads, books appointments, and sends you instant notifications—all while you're closing deals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">Everything you need to capture every lead</p>
+            </div>
+
+            <div class="pricing-card-wrapper fade-in-up">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional Plan</h3>
+                        <p class="pricing-tagline">For serious agents ready to scale</p>
+                    </div>
+
+                    <div class="pricing-amount">
+                        <span class="currency">$</span>
+                        <span class="price">497</span>
+                        <span class="period">/month</span>
+                    </div>
+
+                    <div class="trial-banner">
+                        <svg class="trial-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <span>Includes 30-Day Trial Period</span>
+                    </div>
+
+                    <div class="setup-fee">
+                        <div class="setup-fee-label">One-time setup fee:</div>
+                        <div class="setup-fee-amount">$497</div>
+                        <div class="setup-fee-description">Includes custom AI training, CRM integration & phone number setup</div>
+                    </div>
+
+                    <div class="pricing-breakdown">
+                        <div class="breakdown-row">
+                            <span>Monthly Subscription</span>
+                            <span>$497/mo</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Setup Fee (one-time)</span>
+                            <span>$497</span>
+                        </div>
+                        <div class="breakdown-row total">
+                            <span><strong>Total Due Today</strong></span>
+                            <span><strong>$497</strong></span>
+                        </div>
+                        <p class="total-note">Monthly billing begins after 30-day trial</p>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Unlimited incoming calls</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>24/7 AI call answering (3-ring pickup)</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Automatic lead qualification</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Calendar integration & appointment booking</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Real-time text & email notifications</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Call transcripts & recordings</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>CRM integration (Zillow, Follow Up Boss, etc.)</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Dedicated phone number or call forwarding</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Priority support & onboarding</span>
+                        </li>
+                        <li>
+                            <svg class="feature-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>30-day money-back guarantee</span>
+                        </li>
+                    </ul>
+
+                    <button id="checkout-button" class="checkout-button">
+                        <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        Start 30-Day Trial Now
+                    </button>
+
+                    <div class="payment-security">
+                        <div class="security-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Secure Checkout</span>
+                        </div>
+                        <div class="security-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>SSL Encrypted</span>
+                        </div>
+                        <div class="security-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>PCI Compliant</span>
+                        </div>
+                    </div>
+
+                    <p class="payment-note">Powered by Stripe • Your payment information is secure and never stored on our servers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-signals-section">
+        <div class="container">
+            <div class="trust-signals-grid fade-in-up">
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>30-Day Money-Back Guarantee</h3>
+                    <p>Not satisfied? Get a full refund within 30 days. No questions asked.</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Setup in 24 Hours</h3>
+                    <p>Our team handles everything. You'll be live within one business day.</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Live Support Team</h3>
+                    <p>Dedicated support during business hours. We're here to help you succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Trusted by Top-Producing Agents</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        I was skeptical—another 'magic solution' for agents. But after seeing I was losing $143K/year to missed calls, I tried it. In 90 days, I closed 4 deals that would've gone to competitors. That's $52,000 I would've never seen.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah M.</div>
+                            <div class="author-location">Phoenix, AZ</div>
+                            <div class="author-title">Luxury Residential Specialist | $1.2M annual production</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <span class="stat-value">$52,000</span>
+                        <span class="stat-label">Recovered in 90 Days</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        The calculator was a wake-up call. I thought I was on top of my business, but I was missing 40% of calls during peak season. The AI system paid for itself in the first month with one extra closing.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div class="author-info">
+                            <div class="author-name">Marcus T.</div>
+                            <div class="author-location">Austin, TX</div>
+                            <div class="author-title">Commercial & Residential | $850K annual production</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <span class="stat-value">First Month</span>
+                        <span class="stat-label">ROI Achieved</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        I used to pay an ISA $4,500/month to answer calls. The AI does it better, 24/7, for a fraction of the cost. Plus, it never takes a sick day or vacation. ROI was immediate.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JL</div>
+                        <div class="author-info">
+                            <div class="author-name">Jennifer L.</div>
+                            <div class="author-location">Miami, FL</div>
+                            <div class="author-title">Team Leader | $2.3M annual production</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stat">
+                        <span class="stat-value">90% Less</span>
+                        <span class="stat-label">Than ISA Cost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>How does the 30-day trial work?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You pay the one-time $497 setup fee today to get started. Your monthly subscription of $497 begins after 30 days. During the trial, you have full access to all features. If you're not completely satisfied within 30 days, we'll refund your setup fee—no questions asked.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, Mastercard, American Express, Discover) through our secure Stripe payment processor. You can also use debit cards linked to these networks. All transactions are encrypted and PCI compliant.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>Can I cancel anytime?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. You can cancel your subscription at any time with no penalties or cancellation fees. If you cancel during the 30-day trial period, you'll receive a full refund of your setup fee. After the trial, you can cancel anytime and won't be charged for the following month.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>What's included in the setup fee?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The $497 setup fee covers: custom AI training for your specific market and scripts, CRM integration with your existing tools, dedicated phone number provisioning or call forwarding setup, calendar integration, and a personalized onboarding session with our team. This is a one-time investment that ensures everything works perfectly from day one.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>Is my payment information secure?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We use Stripe, one of the world's most trusted payment processors (used by Amazon, Google, and Microsoft). Your payment information is encrypted with 256-bit SSL and never stored on our servers. Stripe is PCI Level 1 certified—the highest level of payment security.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>What happens after the trial period?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After 30 days, your monthly subscription of $497 will automatically begin. You'll receive an email notification 5 days before the trial ends. Your service continues uninterrupted, and your card on file will be charged monthly. You can cancel anytime before the trial ends to avoid any charges.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>Do you offer refunds after the trial period?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The 30-day money-back guarantee applies to your setup fee if you cancel within the trial period. After the trial, monthly subscriptions are non-refundable, but you can cancel at any time to prevent future charges. We're confident you'll see the value immediately—most agents recover their investment with just one extra deal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>Are there any hidden fees or additional costs?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No hidden fees. The pricing is completely transparent: $497 one-time setup + $497/month subscription. This includes unlimited calls, all features, and support. The only additional cost might be if you want to use your own dedicated phone number (carrier fees apply), but we can provide one for free.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content fade-in-up">
+                <div class="guarantee-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                </div>
+                <h2>Our 30-Day Money-Back Guarantee</h2>
+                <p class="guarantee-description">
+                    We're so confident in the Missed Call Text Back Solution that we offer an unconditional 30-day money-back guarantee. If you don't see answered calls turning into qualified leads and booked appointments, simply contact us within 30 days for a full refund of your setup fee.
+                </p>
+                <div class="guarantee-points">
+                    <div class="guarantee-point">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Full refund within 30 days, no questions asked</span>
+                    </div>
+                    <div class="guarantee-point">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Keep all the call data and insights you've gathered</span>
+                    </div>
+                    <div class="guarantee-point">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Easy cancellation process, no hoops to jump through</span>
+                    </div>
+                </div>
+                <p class="guarantee-footer">The only risk is missing another call while you're reading this.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="order-final-cta">
+        <div class="container">
+            <div class="final-cta-content fade-in-up">
+                <h2>Ready to Stop Losing Deals?</h2>
+                <p>Join 2,847+ top-producing agents who never miss a call</p>
+                <button id="checkout-button-2" class="checkout-button">
+                    <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    Start Your 30-Day Trial Now
+                </button>
+                <p class="final-note">Risk-free trial • $497 setup fee • $497/month after trial</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Security & Trust</h4>
+                    <div class="security-badges">
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>256-bit SSL encryption</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>PCI Level 1 compliant</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>Powered by Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Live support: (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>success@aiagentcalls.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Agent Calls. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Refund Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal" style="display: none;">
+        <div class="modal-content loading-modal">
+            <div class="loading-spinner"></div>
+            <h3>Redirecting to Secure Checkout...</h3>
+            <p>Please wait while we redirect you to our secure payment page.</p>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-icon error-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </div>
+            <h3>Checkout Error</h3>
+            <p id="errorMessage">We're sorry, there was an error processing your request. Please try again or contact support.</p>
+            <button class="modal-close" onclick="closeErrorModal()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Test - Get Started Button</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Test: Calculator Results with Get Started Button</h2>
+                <p class="section-subtitle">Verifying the new button implementation</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                <div class="calculator-card">
+                    <!-- Showing results directly -->
+                    <div class="calculator-results" id="results" style="display: block;">
+                        <div class="results-header">
+                            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <h3>YOUR ANNUAL REVENUE LEAK</h3>
+                        </div>
+
+                        <div class="results-main">
+                            <div class="loss-amount">$127,440</div>
+                            <div class="loss-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Lost deals per year:</span>
+                                    <span class="detail-value">10.6</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Monthly loss:</span>
+                                    <span class="detail-value">$10,620</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="results-breakdown">
+                            <div class="breakdown-card">
+                                <div class="breakdown-label">Daily Missed Calls</div>
+                                <div class="breakdown-value">4.5</div>
+                            </div>
+                            <div class="breakdown-card">
+                                <div class="breakdown-label">Monthly Missed Calls</div>
+                                <div class="breakdown-value">99</div>
+                            </div>
+                            <div class="breakdown-card">
+                                <div class="breakdown-label">Lost Deals/Month</div>
+                                <div class="breakdown-value">2.2</div>
+                            </div>
+                        </div>
+
+                        <!-- NEW: Get Started Button (replaces email capture) -->
+                        <div class="email-capture">
+                            <h4>
+                                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                Ready to Recover This Revenue?
+                            </h4>
+                            <p class="cta-description">Stop losing deals to missed calls. Our AI solution answers every call in 3 rings, qualifies leads, and books appointments automatically.</p>
+                            <a href="order.html" class="get-started-button">
+                                Get Started Now
+                                <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <p class="form-disclaimer">30-day trial • No credit card required to start • Cancel anytime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 30px; background: rgba(37, 99, 235, 0.1); border-radius: 12px; border: 2px solid #2563eb;">
+                <h3 style="color: #60a5fa; margin-bottom: 15px;">✅ Implementation Complete</h3>
+                <ul style="color: #cbd5e1; line-height: 2;">
+                    <li>✓ Email capture form removed</li>
+                    <li>✓ "Get Started" button added</li>
+                    <li>✓ Links to order.html</li>
+                    <li>✓ Matches theme styling</li>
+                    <li>✓ Clear call-to-action</li>
+                    <li>✓ Trial information displayed</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

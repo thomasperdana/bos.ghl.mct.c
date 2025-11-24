@@ -133,60 +133,25 @@ function animateLossAmount(target) {
 }
 
 // ===================================
-// Email Form Submission
+// Get Started Button - Calculator CTA
 // ===================================
-const emailForm = document.getElementById('emailForm');
-const successModal = document.getElementById('successModal');
+// The calculator now has a direct "Get Started" button linking to order.html
+// Track button clicks for analytics
+const getStartedButton = document.querySelector('.get-started-button');
 
-emailForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const emailInput = document.getElementById('email');
-    const email = emailInput.value;
-    
-    // Validate email
-    if (!isValidEmail(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-    
-    // In a real implementation, you would send this data to your server
-    console.log('Email captured:', email);
-    console.log('Calculator data:', {
-        commission: commissionInput.value,
-        calls: callsInput.value,
-        missed: missedInput.value,
-        annualLoss: document.getElementById('annualLoss').textContent
+if (getStartedButton) {
+    getStartedButton.addEventListener('click', function() {
+        // Track conversion (integrate with your analytics)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'get_started_click', {
+                'event_category': 'Calculator',
+                'event_label': 'Get Started Button Clicked'
+            });
+        }
+        
+        console.log('Get Started button clicked from calculator');
     });
-    
-    // Show success modal
-    successModal.style.display = 'block';
-    
-    // Reset form
-    emailInput.value = '';
-    
-    // Track conversion (you would integrate with your analytics here)
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'lead_capture', {
-            'event_category': 'Calculator',
-            'event_label': 'Email Submitted'
-        });
-    }
-}); function isValidEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
 }
-
-function closeModal() {
-    successModal.style.display = 'none';
-}
-
-// Close modal when clicking outside
-window.addEventListener('click', function(e) {
-    if (e.target === successModal) {
-        successModal.style.display = 'none';
-    }
-});
 
 // ===================================
 // FAQ Accordion
@@ -344,10 +309,8 @@ window.addEventListener('load', () => {
 // Keyboard Navigation for Accessibility
 // ===================================
 document.addEventListener('keydown', (e) => {
-    // Close modal on Escape key
-    if (e.key === 'Escape' && successModal.style.display === 'block') {
-        closeModal();
-    }
+    // Handle keyboard shortcuts if needed
+    // Currently no modals to close
 });
 
 // ===================================
